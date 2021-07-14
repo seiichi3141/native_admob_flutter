@@ -71,7 +71,7 @@ class BannerAdView(context: Context, data: Map<String?, Any?>?) : PlatformView {
     }
 
     private fun generateAdView(context: Context, data: Map<String?, Any?>?) {
-        controller.adView = AdView(context)
+        controller.adView = AdView(controller.context)
         val width: Int = (data!!["size_width"] as Double).toInt()
         val height: Int = (data["size_height"] as Double).toInt()
         if (height != -1) controller.adView!!.adSize = AdSize(width, height)
